@@ -10,7 +10,7 @@
 
         //navigation properties
         public User User { get; set; } = null!;
-        public ICollection<Qualification> { get; set; } = new List<Qualification>();
+        public ICollection<Qualification> Qualifications { get; set; } = new List<Qualification>();
 
 
 
