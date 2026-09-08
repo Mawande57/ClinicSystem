@@ -2,7 +2,7 @@
 
 namespace ClinicSystem.Models.Entities
 {
-    public class Patient
+    public sealed class Patient
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

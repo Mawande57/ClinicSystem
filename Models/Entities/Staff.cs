@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem.Models.Entities
 {
-    public class Staff
+    public sealed class Staff
     {
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

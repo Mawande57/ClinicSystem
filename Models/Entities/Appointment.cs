@@ -21,7 +21,8 @@ namespace ClinicSystem.Models.Entities
         public Patient patient { get; set; } = null!;
         public Staff staff { get; set; } = null!;
         public Service service { get; set; } = null!;
-    }
+        public WoundDetail? WoundDetails { get; set; }
+    
 
 
 

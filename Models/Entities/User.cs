@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem.Models.Entities
 {
-    public  class User
+    public  sealed class User
     {
         public Guid Id { get; set; }
         public string Email { get; set; } = string.Empty;
@@ -12,8 +12,9 @@
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-        public DateTime? UpdatedAt { get; set; } 
+        public DateTime? UpdatedAt { get; set; }
 
+        //navigation properties
         public Patient? Patient { get; set; } 
         public Staff? Staff { get; set; }
 
