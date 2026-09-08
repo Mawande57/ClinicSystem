@@ -77,9 +77,33 @@ namespace ClinicSystem.Models.Configurations
             builder.HasIndex(a => new { a.PatientId, a.AppointmentDate })
                 .HasDatabaseName("IX_Appointments_User_Date");
 
+            builder.HasIndex(a => a.Status)
+                .HasDatabaseName("IX_Appointments_Status");
 
+            //RELATIONSHIPS
+            builder.HasOne(a => a.Patient)
+                .WithMany(p => p.Appointments)
+                .HasForeignKey(a => a.ParentId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .IsRequired();
 
+            builder.HasOne(a => a.Service)
+                .WithMany(s => s.Appointments)
+                .HasForeignKey(a => a.ServiceId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
 
+            builder.HasOne(a => a.Staff)
+                .WithMany(s => s.Appointments)
+                .HasForeignKey(a => a.StaffId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired();
+             
+            builder.HasOne(a => a.ParentAppointment)
+                .WithMany(p => p.FollowUpAppointments)
+                .HasForeignKey(a => a.ParentId)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired(false);
 
         }
     }
