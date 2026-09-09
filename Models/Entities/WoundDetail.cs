@@ -19,7 +19,7 @@
 
         //navigation properties
         public Appointment Appointment { get; set; } = null!;
-      
+      //The patient was not ADDED to follow DRY and aviod reduncancy will user Theninclude()
     
     }
 }

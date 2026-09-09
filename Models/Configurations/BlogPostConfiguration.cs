@@ -5,23 +5,15 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class BlogPostConfiguration : IEntityTypeConfiguration<BlogPost>
+    public sealed class BlogPostConfiguration : IEntityTypeConfiguration<BlogPost>
     {
         public void Configure(EntityTypeBuilder<BlogPost> builder)
         {
-            // ============================================================
-            // 1. TABLE NAME
-            // ============================================================
+
             builder.ToTable("BlogPosts", "clinic");
 
-            // ============================================================
-            // 2. PRIMARY KEY
-            // ============================================================
-            builder.HasKey(b => b.Id);
 
-            // ============================================================
-            // 3. PROPERTY CONFIGURATIONS
-            // ============================================================
+            builder.HasKey(b => b.Id);
 
             // Id - Primary key with PostgreSQL GUID generation
             builder.Property(b => b.Id)
@@ -65,11 +57,7 @@ namespace ClinicSystem.Data.Configurations
                 .IsRequired()
                 .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-            // ============================================================
-            // 4. 🔥 CONCURRENCY TOKEN (Optimistic Concurrency)
-            // ============================================================
-
-            // Option 1: Using PostgreSQL's xmin system column (RECOMMENDED)
+         
             builder.Property(b => b.Version)
                 .HasColumnName("xmin")  // PostgreSQL system column
                 .HasColumnType("xid")       // PostgreSQL transaction ID type
@@ -83,7 +71,7 @@ namespace ClinicSystem.Data.Configurations
                 .HasDatabaseName("IX_BlogPosts_Category");
 
             builder.HasIndex(b => b.PublishedAt)
-                .HasDatabaseName("IX_BlogPosts_PublishedAt")
+                .HasDatabaseName("IX_BlogPosts_PublishedAt");
                
 
 

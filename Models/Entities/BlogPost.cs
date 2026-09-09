@@ -9,7 +9,6 @@
         public string Category { get; set; } = string.Empty;
         public string ImagePath { get; set; } = string.Empty;
         public DateTime PublishedAt { get; set; } = DateTime.UtcNow;
-
         public uint Version { get; set; }
 
 

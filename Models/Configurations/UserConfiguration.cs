@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class UserConfiguration : IEntityTypeConfiguration<User>
+    public sealed class UserConfiguration : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {

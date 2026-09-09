@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class QualificationConfiguration : IEntityTypeConfiguration<Qualification>
+    public sealed class QualificationConfiguration : IEntityTypeConfiguration<Qualification>
     {
         public void Configure(EntityTypeBuilder<Qualification> builder)
         {

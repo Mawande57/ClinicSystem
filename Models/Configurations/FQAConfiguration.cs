@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class FAQConfiguration : IEntityTypeConfiguration<FAQ>
+    public sealed class FAQConfiguration : IEntityTypeConfiguration<FAQ>
     {
         public void Configure(EntityTypeBuilder<FAQ> builder)
         {

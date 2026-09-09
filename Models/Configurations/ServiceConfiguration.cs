@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class ServiceConfiguration : IEntityTypeConfiguration<Service>
+    public sealed class ServiceConfiguration : IEntityTypeConfiguration<Service>
     {
         public void Configure(EntityTypeBuilder<Service> builder)
         {

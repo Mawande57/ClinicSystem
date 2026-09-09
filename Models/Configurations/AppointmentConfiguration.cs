@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Models.Configurations
 {
-    public class AppointmentConfiguration : IEntityTypeConfiguration<Appointment>
+    public sealed class AppointmentConfiguration : IEntityTypeConfiguration<Appointment>
     {
         public void Configure(EntityTypeBuilder<Appointment> builder)
         {

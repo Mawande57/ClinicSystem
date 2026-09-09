@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class TestimonialConfiguration : IEntityTypeConfiguration<Testimonial>
+    public sealed class TestimonialConfiguration : IEntityTypeConfiguration<Testimonial>
     {
         public void Configure(EntityTypeBuilder<Testimonial> builder)
         {

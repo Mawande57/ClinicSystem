@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class HealthTipsConfiguration : IEntityTypeConfiguration<HealthTips>
+    public sealed class HealthTipsConfiguration : IEntityTypeConfiguration<HealthTips>
     {
         public void Configure(EntityTypeBuilder<HealthTips> builder)
         {

@@ -4,7 +4,7 @@ using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.Data.Configurations
 {
-    public class StaffConfiguration : IEntityTypeConfiguration<Staff>
+    public sealed class StaffConfiguration : IEntityTypeConfiguration<Staff>
     {
         public void Configure(EntityTypeBuilder<Staff> builder)
         {

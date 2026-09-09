@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem.Models.Entities
 {
-    public enum UseRole
+    public enum UserRole
     {
         Staff,
         Patient
