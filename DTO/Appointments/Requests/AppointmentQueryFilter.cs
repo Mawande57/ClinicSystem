@@ -1,4 +1,5 @@
 ﻿using ClinicSystem.DTOs.Common;
+using ClinicSystem.Models.Entities;
 
 namespace ClinicSystem.DTOs.Appointments.Requests;
 

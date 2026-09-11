@@ -1,4 +1,4 @@
-﻿namespace ClinicSystem.DTOs.Staff.Requests;
+﻿namespace ClinicSystem.DTO.Staff.Requests;
 
 public record CreateStaffRequestDto
 {

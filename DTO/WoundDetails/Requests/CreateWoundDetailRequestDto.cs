@@ -1,4 +1,4 @@
-﻿namespace ClinicSystem.DTOs.WoundDetails.Requests;
+﻿namespace ClinicSystem.DTO.WoundDetails.Requests;
 
 public record CreateWoundDetailRequestDto
 {
